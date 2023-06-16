@@ -1,10 +1,12 @@
 # FlaCGEC
 
+
+
 ### Data Structure
 
 We leverage JSON format to organize our data, as illustrated below:
 
-![data_structure](mdImg/data_structure.jpg)
+<img src="mdImg/data_structure.jpg" alt="data_structure" style="zoom:33%;" />
 
  Figure 1: A screenshot of the JSON file.
 
@@ -21,7 +23,7 @@ We list more instantiated grammar points that we discussed in this paper, their 
 
 To annotate related grammar points of a sentence, we display the overall annotation pipeline in Figure 2.
 
-![image-20230616121424492](mdImg/image-20230616121424492.png)
+<img src="mdImg/image-20230616121424492.png" alt="image-20230616121424492" style="zoom:33%;" />
 
 Figure 2: The grammar point annotation process.
 

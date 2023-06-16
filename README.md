@@ -15,6 +15,8 @@ We leverage JSON format to organize our data, as illustrated below:
 We show more examples in FlaCGEC dataset in Table 1.
 As we can see, multiple errors exist in a sentence and they may refer to different constituents of the sentences.
 
+
+
 ###  More Grammar Points
 
 We list more instantiated grammar points that we discussed in this paper, their difficulty levels and their examples in Table 2.
@@ -58,9 +60,13 @@ Figure 4: Interface of bad cases filtering.
 
 ### More Statistics of FlaCGEC
 
-<img src="mdImg/sentenceTopic.png" alt="sentenceTopic" style="zoom: 20%;" />                                  <img src="mdImg/length_distribution.png" alt="length_distribution" style="zoom:35%;" />
+<img src="mdImg/sentenceTopic.png" alt="sentenceTopic" style="zoom: 20%;" />                                  
 
-Figure 5: Distribution of sentence topics in FlaCGEC.                 Figure 6: Length distribution of sentences.
+Figure 5: Distribution of sentence topics in FlaCGEC.                 
+
+<img src="mdImg/length_distribution-1686889840085.png" alt="length_distribution" style="zoom:33%;" />
+
+Figure 6: Length distribution of sentences.
 
 We display more statistics of our dataset below. We collect the frequent tokens in the dataset as the topics and display the distribution of sentence topics in FlaCGEC in Figure 5. As we can see, FlaCGEC contains sentences covering a wide range of topics.
 Amongst them, the most frequent topics are life, time, health, and etc. This indicates that the collected data is practical and covers wide scenarios of language expression. We display the length distribution of sentences over different levels in Figure 6. We can see most sentences have a length ranging from $20$ to $40$.

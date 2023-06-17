@@ -39,7 +39,7 @@ As we can see, multiple errors exist in a sentence and they may refer to differe
             Translation: He <strong style="color:red;">listens</strong> and said disgruntledly: “I <strong style="color:red;">already</strong> have tried !”<br />
             [T] 他听了很不服气地说：“我已经尽力而为了！”<br />
             Translation: He listened and said disgruntledly: “I have already tried !”<br />
-            [A] 2 2|||M-Aspect particle<sub>动态助词</sub>|||了；16 17\|\|\|W-Adverbs of time<sub>时间副词</sub>|||None
+            [A] 2 2|||M-Aspect particle<sub>动态助词</sub>|||了；16 17|||W-Adverbs of time<sub>时间副词</sub>|||None
         </td>
     </tr>
     <tr>

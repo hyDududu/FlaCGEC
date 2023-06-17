@@ -42,6 +42,28 @@ We list more instantiated grammar points that we discussed in this paper, their 
 		<td>有点儿</td>
 		<td>左边这瓶<font color="blue">有点儿</font>酸</td>
 	</tr>
+	<tr>
+		<td rowspan="3">Conjunctions for connecting clauses<sub>[介词连接分句]</sub></td>
+		<td>如果</td>
+		<td><font color="blue">如果</font>没有标记，散落的片断将…</td>
+	</tr>
+	<tr>
+		<td>因此</td>
+		<td><font color="blue">因此</font>，人们以乌龟指长寿。</td>
+	</tr>
+	<tr>
+		<td>总之</td>
+		<td><font color="blue">总之</font>，电视带给我们知识和娱乐。</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Modal verbs<sub>[能愿动词]</sub></td>
+		<td>需要</td>
+		<td>这项工程至少<font color="blue">需要</font>10年时间才能完工。</td>
+	</tr>
+	<tr>
+		<td>得</td>
+		<td>妈妈生病了，我<font color="blue">得</font>马上回国去看她。</td>
+	</tr>
 </table>
 
 Table 2: Selected instantiated grammar points of FlaCGEC dataset. The words or phrases related to the grammar points are highlighted with <strong style="color:blue;">blue </strong>color.

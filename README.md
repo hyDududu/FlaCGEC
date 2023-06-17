@@ -36,11 +36,11 @@ We list more instantiated grammar points that we discussed in this paper, their 
 	<tr>
 		<td rowspan="2">Adverbs of degree<sub>[程度副词]</sub></td>
 		<td>很</td>
-		<td>有的人<font color="blue">很</font>从容</td>
+		<td>有的人<font color="blue">很</font>从容。</td>
 	</tr>
 	<tr>
 		<td>有点儿</td>
-		<td>左边这瓶<font color="blue">有点儿</font>酸</td>
+		<td>左边这瓶<font color="blue">有点儿</font>酸。</td>
 	</tr>
 	<tr>
 		<td rowspan="3">Conjunctions for connecting clauses<sub>[介词连接分句]</sub></td>
@@ -63,6 +63,24 @@ We list more instantiated grammar points that we discussed in this paper, their 
 	<tr>
 		<td>得</td>
 		<td>妈妈生病了，我<font color="blue">得</font>马上回国去看她。</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Passive sentences<sub>[被动句]</sub></td>
+		<td>被</td>
+		<td>自行车<font color="blue">被</font>当做一种交通工具。</td>
+	</tr>
+	<tr>
+		<td>被…所</td>
+		<td>快乐的人不会<font color="blue">被</font>痛苦<font color="blue">所</font>左右。</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Successive complex sentences<sub>[承接复句]</sub></td>
+		<td>于是</td>
+		<td>唐太宗很生气，<font color="blue">于是</font>召集群臣，当面训斥魏征。</td>
+	</tr>
+	<tr>
+		<td>便</td>
+		<td>司马光受父亲影响，自幼<font color="blue">便</font>聪明好学。</td>
 	</tr>
 </table>
 

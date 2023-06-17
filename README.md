@@ -6,7 +6,7 @@
 
 We leverage JSON format to organize our data, as illustrated below:
 
-<img src="mdImg/data_structure.jpg" alt="data_structure" style="zoom:33%;" />
+<img src="mdImg/image-20230617144425265.png" alt="image-20230617144425265" style="zoom:50%;" />
 
  Figure 1: A screenshot of the JSON file.
 
@@ -15,11 +15,36 @@ We leverage JSON format to organize our data, as illustrated below:
 We show more examples in FlaCGEC dataset in Table 1.
 As we can see, multiple errors exist in a sentence and they may refer to different constituents of the sentences.
 
+| [S] 节日期间，<strong style="color:red;">每</strong>饭店纷纷推出特色餐饮<strong style="color:red;">特惠措施</strong>，吸引市民走进饭店.<br />Translation: During the festival, <strong style="color:red;">per</strong> hotel introduces special <strong style="color:red;">cuisines</strong> promotion activities, attracting citizens to walk in.<br/>[T] 节日期间，各饭店纷纷推出特色餐饮和特惠措施，吸引市民走进饭店。<br/>Translation: During the festival, every hotel introduces special cuisines and promotion activities, attracting citizens to walk in.<br />[A] 5 5\|\|\|S-Demonstrative pronouns~[指示代词]~\|\|\|各；16 16\|\|\|M-Prepositions for objects~[介词引出对象]~\|\|\|和 |
+| ------------------------------------------------------------ |
+| **[S] 睡觉时，身体<strong style="color:red;">感觉到</strong>，人就容易梦到什么内容。<br />Translation: During sleeping, people easily <strong style="color:red;">dream</strong> the bodies feel.<br />[T] 睡觉时，身体感觉到什么，人就容易梦到什么内容。<br />Translation: During sleeping, people easily dream what the bodies feel.<br />[A] 9 9\|\|\|M-Non-interrogative use of interrogative pronouns~[疑问词的非疑问用法]~\|\|\|什么** |
+| **[S] 他<strong style="color:red;">听</strong>很不服气地说：“我尽力而为了<strong style="color:red;">已经</strong>！”<br />Translation: He <strong style="color:red;">listens</strong> and said disgruntledly: “I <strong style="color:red;">already</strong> have tried !”<br />[T] 他听了很不服气地说：“我已经尽力而为了！”<br />Translation: He listened and said disgruntledly: “I have already tried !”<br />[A] 2 2\|\|\|M-Aspect particle~[动态助词]~\|\|\|了；16 17\|\|\|W-Adverbs of time~[时间副词]~\|\|\|None** |
+| **[S] <strong style="color:red;">但有没</strong>受到老板的责备，<strong style="color:red;">而且</strong>他心里很失落。<br />Translation: <strong style="color:red;">But did he</strong> receive the blame from his boss, <strong style="color:red;">and</strong> he is upset.<br />[T] 虽然没有受到老板的责备，但是他心里很失落。<br />Translation: Even though he did not receive the blame from his boss, he is upset.<br />[A] 0 0\|\|\|S-Conjunctions for connecting clauses~[介词连接分句]~\|\|\|虽然；2 2\|\|\|W-Negative adverb~[否定副词]~\|\|\|没；11 12\|\|\|W-Conjunctions for connecting clauses~[介词连接分句]~\|\|\|但是** |
 
+ Table 1: More examples of fine-grained linguistic annotation. 
 
 ###  More Grammar Points
 
 We list more instantiated grammar points that we discussed in this paper, their difficulty levels and their examples in Table 2.
+
+<table>
+	<tr>
+		<td>Grammar Points</td>
+		<td>Instantiations</td>
+		<td>Examples</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Adverbs of degree<sub>[程度副词]</sub></td>
+		<td>很</td>
+		<td>有的人<font color="blue">很</font>从容</td>
+	</tr>
+	<tr>
+		<td>有点儿</td>
+		<td>左边这瓶<font color="blue">有点儿</font>酸</td>
+	</tr>
+</table>
+
+Table 2: Selected instantiated grammar points of FlaCGEC dataset. The words or phrases related to the grammar points are highlighted with <strong style="color:blue;">blue </strong>color.
 
 ### Grammar Point Annotation Process
 

@@ -6,7 +6,7 @@
 
 We leverage JSON format to organize our data, as illustrated below:
 
-<img src="mdImg/image-20230617144425265.png" alt="image-20230617144425265" style="zoom:50%;" />
+<img src="mdImg/data_structure.png" alt="image-20230617144425265" style="zoom:50%;" />
 
  Figure 1: A screenshot of the JSON file.
 
@@ -161,7 +161,7 @@ Figure 4: Interface of bad cases filtering.
 
 Figure 5: Distribution of sentence topics in FlaCGEC.                 
 
-<img src="mdImg/length_distribution-1686889840085.png" alt="length_distribution" style="zoom:33%;" />
+<img src="mdImg/length_distribution.png" alt="length_distribution" style="zoom:33%;" />
 
 Figure 6: Length distribution of sentences.
 

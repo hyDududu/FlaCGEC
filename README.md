@@ -2,11 +2,9 @@
 
 ## FlaCGEC: A Chinese Grammatical Error Correction Dataset with Fine-grained Linguistic Annotation 
 
-论文的PDF版本可以在以下链接中进行查看：
+论文的PDF版本可以在以下链接中进行查看：[FlaCGEC: A Chinese Grammatical Error Correction Dataset with Fine-grained Linguistic Annotation](https://dl.acm.org/doi/10.1145/3583780.3615119)
 
-[FlaCGEC: A Chinese Grammatical Error Correction Dataset with Fine-grained Linguistic Annotation]:(https://dl.acm.org/doi/10.1145/3583780.3615119)
-
- 如果您认为我们的工作对您的工作有帮助，请引用我们的论文： 
+ 如果您认为我们的工作对您的研究有帮助，请引用我们的论文： 
 
 ```latex
 @inproceedings{Hanyue_Du_CIKM23,

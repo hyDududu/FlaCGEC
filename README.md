@@ -1,19 +1,57 @@
 # FlaCGEC
 
+## FlaCGEC: A Chinese Grammatical Error Correction Dataset with Fine-grained Linguistic Annotation 
 
+论文的PDF版本可以在以下链接中进行查看：
+
+[FlaCGEC: A Chinese Grammatical Error Correction Dataset with Fine-grained Linguistic Annotation]:(https://dl.acm.org/doi/10.1145/3583780.3615119)
+
+ 如果您认为我们的工作对您的工作有帮助，请引用我们的论文： 
+
+```latex
+@inproceedings{Hanyue_Du_CIKM23,
+author = {Du, Hanyue and Zhao, Yike and Tian, Qingyuan and Wang, Jiani and Wang, Lei and Lan, Yunshi and Lu, Xuesong},
+title = {FlaCGEC: A Chinese Grammatical Error Correction Dataset with Fine-Grained Linguistic Annotation},
+year = {2023},
+isbn = {9798400701245},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3583780.3615119},
+doi = {10.1145/3583780.3615119},
+booktitle = {Proceedings of the 32nd ACM International Conference on Information and Knowledge Management},
+pages = {5321–5325},
+numpages = {5},
+keywords = {Chinese grammatical error correction, deep learning, fine-grained linguistic annotation},
+location = {Birmingham, United Kingdom},
+series = {CIKM '23}
+}
+```
+
+
+
+## Dataset Description
+
+中文语法错误纠正 (CGEC) 旨在检测和纠正句子中的所有语法错误，已受到越来越多的研究人员的关注。尽管目前已经开发了多个 CGEC 数据集来支持研究，但这些数据集仍缺乏提供语法错误的深层语言拓扑的能力。为解决这个限制，本仓库提供了一个新的 CGEC 数据集：FlaCGEC，它具有细粒度的语言注释，包含 78 个实例化语法点和 3 种编辑类型， 数据的整体统计如下表所示。 
+
+| Properties                     | Train | Dev   | Test  |
+| ------------------------------ | ----- | ----- | ----- |
+| Sentences                      | 10804 | 1334  | 1325  |
+| Average source sentence length | 35.09 | 34.76 | 35.83 |
+| Average target sentence length | 35.59 | 35.29 | 36.34 |
+| Edits per sentence             | 1.72  | 1.69  | 1.71  |
+| Grammar points                 | 77    | 69    | 72    |
+
+数据集下载地址见本仓库data文件夹：https://github.com/hyDududu/FlaCGEC/tree/main/data
 
 ### Data Structure
 
-We leverage JSON format to organize our data, as illustrated below:
+FlaCGEC数据集以 JSON 文件形式进行存储，具体数据结构如下所示：
 
 <img src="mdImg/data_structure.png" alt="image-20230617144425265" style="zoom:50%;" />
 
- Figure 1: A screenshot of the JSON file.
+### Some Examples
 
-### More Examples
-
-We show more examples in FlaCGEC dataset in Table 1.
-As we can see, multiple errors exist in a sentence and they may refer to different constituents of the sentences.
+下表中展示了 FlaCGEC 数据集的一些示例，一个句子可能存在多个错误，并且错误涉及句子的不同组成部分。
 
 <table>
 	<tr>
@@ -53,11 +91,9 @@ As we can see, multiple errors exist in a sentence and they may refer to differe
     </tr>
 </table>
 
- Table 1: More examples of fine-grained linguistic annotation. 
+###  Some Grammar Points
 
-###  More Grammar Points
-
-We list more instantiated grammar points that we discussed in this paper, their difficulty levels and their examples in Table 2.
+下表列出了部分实例化语法点、和它们相应的示例。
 
 <table>
 	<tr>
@@ -116,68 +152,4 @@ We list more instantiated grammar points that we discussed in this paper, their 
 	</tr>
 </table>
 
-Table 2: Selected instantiated grammar points of FlaCGEC dataset. The words or phrases related to the grammar points are highlighted with <strong style="color:blue;">blue </strong>color.
 
-### Grammar Point Annotation Process
-
-To annotate related grammar points of a sentence, we display the overall annotation pipeline in Figure 2.
-
-<img src="mdImg/image-20230616121424492.png" alt="image-20230616121424492" style="zoom:33%;" />
-
-Figure 2: The grammar point annotation process.
-
-We first write rules to annotate grammar in HSK corpus via regex.
-Meanwhile, we leverage the illustrative examples in the textbook as training data where the grammar points and corresponding sentences are given.
-We merge the sentences from HSK corpus and illustrative examples from textbook, treating them as training samples.
-Then we employ the PLMs of Chinese-BERT model as a tagging model to tag the grammar points that are related to the sentence and train with the training samples.
-After training, we apply the well-trained model to the unlabeled HSK corpus and select the predicted sentences with high confidence scores as the labeled training samples.
-We merge them with the existing training samples and train a new tagging model.
-This procedure repeats for multiple iterations until the number of training samples does not increase greatly.
-
-Eventually, we obtain a set of sentences annotated with related grammar points as the target sentences.
-
-### Annotation Process
-
-We chunk the entire data into multiple batches and automatically create an excel worksheet for each batch. 
-Before annotation, we ask each annotator to read the guidelines carefully (See Figure 3), which describe judgment criterion, annotation operations, and typical examples. 
-Each annotator needs to follow the guidelines to complete the scoring.
-
-We also show the translated interface for filtering the base cases in Figure 4. As depicted in the figure, the blue part that the annotators need to fill.
-Column 2 and 3 are source sentences and target sentences generated via rules. 
-Column 4 is the area where the annotator fills in the score to the source sentence according to the criterion in guideline.
-Column 5 is the area where the annotator fills in the score to judge the grammar points and whether edit operations in column 5 are correct or not.
-
-![guideline](mdImg/guideline.jpg)
-
-Figure 3: Annotation guidelines that describe judgment criterion, annotation operations, and typical examples.
-
-![excel_worksheet](mdImg/excel_worksheet.png)
-
-Figure 4: Interface of bad cases filtering.
-
-### More Statistics of FlaCGEC
-
-<img src="mdImg/sentenceTopic.png" alt="sentenceTopic" style="zoom: 20%;" />                                  
-
-Figure 5: Distribution of sentence topics in FlaCGEC.                 
-
-<img src="mdImg/length_distribution.png" alt="length_distribution" style="zoom:33%;" />
-
-Figure 6: Length distribution of sentences.
-
-We display more statistics of our dataset below. We collect the frequent tokens in the dataset as the topics and display the distribution of sentence topics in FlaCGEC in Figure 5. As we can see, FlaCGEC contains sentences covering a wide range of topics.
-Amongst them, the most frequent topics are life, time, health, and etc. This indicates that the collected data is practical and covers wide scenarios of language expression. We display the length distribution of sentences over different levels in Figure 6. We can see most sentences have a length ranging from $20$ to $40$.
-There are also some short sentences with length smaller than $20$ and long sentences with length longer than $80$.
-
-### Implementation Details
-
-For GECToR-Chinese, we employ the StructBert as its encoder and train the model with the Adam optimizer. 
-We set batch size as $16$ and learning rate as $1e-5$ for training.
-The maximum training epoch number is set as $40$ for all evaluated datasets. 
-In addition, we setup a warm-up procedure, where the model is first trained for $2$ cold epochs with a learning rate of $1e-3$.
-
-For Chinese BART, we leverage Chinese-BART-Large as the pre-trained model, and train the model with the Adam optimizer.
-We set the learning rate as $3e-6$, and adjust it with the learning rate scheduler of Polynomial.
-The maximum training epoch number is set as $10$ for all evaluated datasets. 
-
-For EBGEC, Transformer-big is employed as the encoder and the beam search with a beam size of $5$ is utilized as decoding strategy. We also train the model with the Adam optimizer. We set the learning rate as $5e-4$ for FlaCGEC and $5e-5$ for the other two datasets.
